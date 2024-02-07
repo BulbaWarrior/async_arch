@@ -1,0 +1,23 @@
+---
+services:
+  db:
+    image: postgres:15.1
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data:rw
+
+  adminer:
+    image: adminer
+    ports:
+      - 8081:8080
+
+  rabbitmq:
+    image: rabbitmq:3.12
+    ports:
+      - 5672:5672
+
+volumes:
+  pgdata:

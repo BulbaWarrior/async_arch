@@ -1,0 +1,24 @@
+[package]
+name = "async_arch_template"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+amqprs = "1.5.2"
+anyhow = "1.0.79"
+axum = "0.7.4"
+log = "0.4.20"
+pretty_env_logger = "0.5.0"
+serde = "1.0.196"
+serde_json = "1.0.113"
+sqlx = { version = "0.7.3", features = [
+    "postgres",
+    "runtime-tokio-rustls",
+    "time",
+    "uuid",
+] }
+tokio = { version = "1.36.0", features = ["full"] }
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.17", features = ["env-filter"] }
