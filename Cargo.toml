@@ -26,3 +26,6 @@ sqlx = { version = "0.7.3", features = [
 tokio = { version = "1.36.0", features = ["full"] }
 tracing = "0.1.37"
 tracing-subscriber = { version = "0.3.17", features = ["env-filter"] }
+
+[workspace]
+members = ["crates/*"]
